@@ -25,10 +25,10 @@ func setupMounts(stateDir string) error {
 	}
 
 	mountMap := [][]string{
-		{"/var/log", filepath.Join(stateDir, "logs")},
-		{"/var/lib/cni", filepath.Join(stateDir, "cni")},
-		{"/var/lib/kubelet", filepath.Join(stateDir, "kubelet")},
-		{"/etc/rancher", filepath.Join(stateDir, "etc", "rancher")},
+		{"/data/data/com.termux/files/usr/var/log", filepath.Join(stateDir, "logs")},
+		{"/data/data/com.termux/files/usr/var/lib/cni", filepath.Join(stateDir, "cni")},
+		{"/data/data/com.termux/files/usr/var/lib/kubelet", filepath.Join(stateDir, "kubelet")},
+		{"/data/data/com.termux/files/usr/etc/rancher", filepath.Join(stateDir, "etc", "rancher")},
 	}
 
 	for _, v := range mountMap {

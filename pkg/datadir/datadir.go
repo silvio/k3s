@@ -10,10 +10,10 @@ import (
 )
 
 var (
-	DefaultDataDir     = "/var/lib/rancher/" + version.Program
+	DefaultDataDir     = "/data/data/com.termux/files/usr/var/lib/rancher/" + version.Program
 	DefaultHomeDataDir = "${HOME}/.rancher/" + version.Program
 	HomeConfig         = "${HOME}/.kube/" + version.Program + ".yaml"
-	GlobalConfig       = "/etc/rancher/" + version.Program + "/" + version.Program + ".yaml"
+	GlobalConfig       = "/data/data/com.termux/files/usr/etc/rancher/" + version.Program + "/" + version.Program + ".yaml"
 )
 
 func Resolve(dataDir string) (string, error) {
