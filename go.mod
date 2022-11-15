@@ -91,7 +91,7 @@ require (
 	github.com/k3s-io/kine v0.9.6
 	github.com/klauspost/compress v1.15.9
 	github.com/kubernetes-sigs/cri-tools v0.0.0-00010101000000-000000000000
-	github.com/lib/pq v1.10.2
+	github.com/lib/pq v1.10.7
 	github.com/mattn/go-sqlite3 v1.14.15
 	github.com/minio/minio-go/v7 v7.0.33
 	github.com/natefinch/lumberjack v2.0.0+incompatible
