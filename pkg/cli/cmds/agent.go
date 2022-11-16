@@ -118,7 +118,7 @@ var (
 		Name:        "private-registry",
 		Usage:       "(agent/runtime) Private registry configuration file",
 		Destination: &AgentConfig.PrivateRegistry,
-		Value:       "/etc/rancher/" + version.Program + "/registries.yaml",
+		Value:       "/mnt/user/0/emulated/0/k3s/etc/rancher/" + version.Program + "/registries.yaml",
 	}
 	AirgapExtraRegistryFlag = cli.StringSliceFlag{
 		Name:   "airgap-extra-registry",
@@ -183,13 +183,13 @@ var (
 		Name:        "image-credential-provider-bin-dir",
 		Usage:       "(agent/node) The path to the directory where credential provider plugin binaries are located",
 		Destination: &AgentConfig.ImageCredProvBinDir,
-		Value:       "/var/lib/rancher/credentialprovider/bin",
+		Value:       "/mnt/user/0/emulated/0/k3s/var/lib/rancher/credentialprovider/bin",
 	}
 	ImageCredProvConfigFlag = cli.StringFlag{
 		Name:        "image-credential-provider-config",
 		Usage:       "(agent/node) The path to the credential provider plugin config file",
 		Destination: &AgentConfig.ImageCredProvConfig,
-		Value:       "/var/lib/rancher/credentialprovider/config.yaml",
+		Value:       "/mnt/user/0/emulated/0/k3s/var/lib/rancher/credentialprovider/config.yaml",
 	}
 	DisableSELinuxFlag = cli.BoolTFlag{
 		Name:   "disable-selinux",
@@ -245,7 +245,7 @@ func NewAgentCommand(action func(ctx *cli.Context) error) cli.Command {
 				Name:        "data-dir,d",
 				Usage:       "(agent/data) Folder to hold state",
 				Destination: &AgentConfig.DataDir,
-				Value:       "/var/lib/rancher/" + version.Program + "",
+				Value:       "/mnt/user/0/emulated/0/k3s/var/lib/rancher/" + version.Program + "",
 			},
 			NodeNameFlag,
 			WithNodeIDFlag,

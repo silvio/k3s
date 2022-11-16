@@ -14,6 +14,7 @@ import (
 )
 
 func setupMounts(stateDir string) error {
+	// TODO: Maybe: removeList
 	// Remove symlinks to the rootful files, so that we can create our own files.
 	removeList := []string{
 		"/var/run/netns",
@@ -25,6 +26,8 @@ func setupMounts(stateDir string) error {
 	}
 
 	mountMap := [][]string{
+		// TODO: What is the current stateDir? Do I need to change this
+		// setting?
 		{"/var/log", filepath.Join(stateDir, "logs")},
 		{"/var/lib/cni", filepath.Join(stateDir, "cni")},
 		{"/var/lib/kubelet", filepath.Join(stateDir, "kubelet")},

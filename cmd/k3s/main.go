@@ -23,7 +23,7 @@ import (
 	"github.com/urfave/cli"
 )
 
-var criDefaultConfigPath = "/etc/crictl.yaml"
+var criDefaultConfigPath = "/mnt/user/0/emulated/0/k3s/etc/crictl.yaml"
 
 // main entrypoint for the k3s multicall binary
 func main() {

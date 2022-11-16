@@ -10,10 +10,10 @@ import (
 )
 
 var (
-	DefaultDataDir     = "/var/lib/rancher/" + version.Program
-	DefaultHomeDataDir = "${HOME}/.rancher/" + version.Program
-	HomeConfig         = "${HOME}/.kube/" + version.Program + ".yaml"
-	GlobalConfig       = "/etc/rancher/" + version.Program + "/" + version.Program + ".yaml"
+	DefaultDataDir     = "/mnt/user/0/emulated/0/k3s/var/lib/rancher/" + version.Program
+	DefaultHomeDataDir = "/mnt/user/0/emulated/0/k3s/rancher/" + version.Program
+	HomeConfig         = "/mnt/user/0/emulated/0/k3s/kube/" + version.Program + ".yaml"
+	GlobalConfig       = "/mnt/user/0/emulated/0/k3s/etc/rancher/" + version.Program + "/" + version.Program + ".yaml"
 )
 
 func Resolve(dataDir string) (string, error) {

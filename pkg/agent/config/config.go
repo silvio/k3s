@@ -300,7 +300,9 @@ func locateOrGenerateResolvConf(envInfo *cmds.Agent) string {
 	if envInfo.ResolvConf != "" {
 		return envInfo.ResolvConf
 	}
-	resolvConfs := []string{"/etc/resolv.conf", "/run/systemd/resolve/resolv.conf"}
+	// TODO: use android resolver here, see
+	// getprop net.dns1; getprop net.dns2; getprop net.dns3
+	resolvConfs := []string{"/mnt/user/0/emulated/0/k3s/etc/resolv.conf"}
 	for _, conf := range resolvConfs {
 		if isValidResolvConf(conf) {
 			return conf
